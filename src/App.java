@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class App {
@@ -10,19 +11,35 @@ public class App {
         Llevar un seguimiento del puntaje del usuario.
         Utilizar condicionales para verificar si la respuesta del usuario es correcta. */
         Scanner sc = new Scanner(System.in);
+        Random rng = new Random();
         String preguntas[]=new String[9];
         String respuestas[]=new String[9];
         int contador=0;
-        preguntas[0]="";
-        preguntas[1]="";
-        preguntas[2]="";
-        preguntas[3]="";
-        preguntas[4]="";
-        preguntas[5]="";
-        preguntas[6]="";
-        preguntas[7]="";
-        preguntas[8]="";
-        preguntas[9]="";
+        preguntas[0]="¿Cuál es la capital de España?";
+        preguntas[1]="¿En qué año empezó la guerra civil española?";
+        preguntas[2]="¿Cuántas vidas tiene un gato?";
+        preguntas[3]="¿Cómo se llama la protagonista de Los Juegos del Hambre?";
+        preguntas[4]="¿Cuál es el tercer planeta más cercano al Sol?";
+        preguntas[5]="¿Cuál es el nombre del pokémon más famoso?";
+        preguntas[6]="¿Cuál es la ciudad con más rotondas de España?";
+        preguntas[7]="¿Cuál es el pico más alto de España?";
+        preguntas[8]="¿Cómo se llama el libro más famoso de Juan Ramón Jiménez?";
+        preguntas[9]="¿Qué nota musical le sigue a un La?";
+        respuestas[0]="Madrid";
+        respuestas[1]="1936";
+        respuestas[2]="7";
+        respuestas[3]="Katniss Everdeen";
+        respuestas[4]="La Tierra";
+        respuestas[5]="Pikachu";
+        respuestas[6]="Dos Hermanas";
+        respuestas[7]="El Teide";
+        respuestas[8]="Platero y yo";
+        respuestas[9]="Si";
+        int preguntaRandom = rng.nextInt(respuestas.length); //he hecho la variable esta para poder hacer el random de las preguntas, como con piedra papel tijera
+        for(int i = 0; i < preguntas.length; i++){
+            System.out.println(preguntas[preguntaRandom]);
+
+        }
 
 
 
