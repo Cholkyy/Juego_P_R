@@ -12,8 +12,9 @@ public class App {
         Utilizar condicionales para verificar si la respuesta del usuario es correcta. */
         Scanner sc = new Scanner(System.in);
         Random rng = new Random();
-        String preguntas[]=new String[9];
-        String respuestas[]=new String[9];
+        String preguntas[]=new String[10];
+        String respuestas[]=new String[10];
+        String usuario;
         int contador=0;
         preguntas[0]="¿Cuál es la capital de España?";
         preguntas[1]="¿En qué año empezó la guerra civil española?";
@@ -35,12 +36,15 @@ public class App {
         respuestas[7]="El Teide";
         respuestas[8]="Platero y yo";
         respuestas[9]="Si";
-        int preguntaRandom = rng.nextInt(respuestas.length); //he hecho la variable esta para poder hacer el random de las preguntas, como con piedra papel tijera
         for(int i = 0; i < preguntas.length; i++){
+            int preguntaRandom = rng.nextInt(respuestas.length); //he hecho la variable esta para poder hacer el random de las preguntas, como con piedra papel tijera
             System.out.println(preguntas[preguntaRandom]);
-
+            usuario =sc.nextLine();
+            if(usuario.equalsIgnoreCase(respuestas[preguntaRandom])){
+                contador++;
+            }
         }
-
+        System.out.println("Has acertado "+contador+" preguntas de 10");
 
 
 
