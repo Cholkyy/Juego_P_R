@@ -47,6 +47,5 @@ public class App {
         System.out.println("Has acertado "+contador+" preguntas de 10");
         sc.close();
 
-
     }
 }
